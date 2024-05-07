@@ -1,9 +1,10 @@
-app = "bc-redis"
+app = "bc-redis-cache"
 primary_region = "lax"
+swap_size_mb = 1024
 
-[mounts]
-  destination = "/data"
-  source = "bc_redis_data"
+#[mounts]
+#  destination = "/data"
+#  source = "bc_redis_cache_data"
 
 [metrics]
   port = 9091
@@ -20,7 +21,7 @@ primary_region = "lax"
 [env]
   ENV = "production"
   APPENDONLY="yes"
-  MAXMEMORY_POLICY="noeviction"
+  MAXMEMORY_POLICY="allkeys-lru"
   FLY_VM_MEMORY_MB="256"
 
 # Uncomment these lines for public internet access to Redis on port 10000
