@@ -16,7 +16,7 @@ swap_size_mb = 1024
   dockerfile = "Dockerfile"
   [build.args]
     ENV = "production"
-    REDIS_VERSION = "7.2"
+    REDIS_VERSION = "8.2"
 
 [env]
   ENV = "production"
