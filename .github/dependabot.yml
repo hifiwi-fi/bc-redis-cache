@@ -1,0 +1,11 @@
+version: 2
+
+updates:
+  - package-ecosystem: "docker"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    allow:
+      - dependency-name: "redis"
+        update-types:
+          - "version-update:semver-patch"
