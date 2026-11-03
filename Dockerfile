@@ -1,4 +1,4 @@
-FROM redis:8.2.10-alpine
+FROM redis:8.2.11-alpine
 
 COPY start-redis-server.sh /usr/bin/start-redis-server.sh
 
